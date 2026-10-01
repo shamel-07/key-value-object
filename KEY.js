@@ -231,3 +231,68 @@ function filterByValue(obj, minValue) {
     return Object.fromEntries(filteredEntries)
 }
 console.log(filterByValue({ math: 95, english: 75, science: 88 },80))
+
+let salary ={
+    base : 3000 , 
+    bonus : 500 , 
+    tax : -400
+}
+for (let key in salary){
+    console.log (key + ": " + salary[key])
+}
+
+let inventory ={
+    laptop: 5,
+    mouse: 0,
+    keyboard: 10,
+    monitor: 0
+}
+for (let items in inventory ){
+    if (inventory[items] > 0){
+        console.log(items)
+    }
+}
+
+//?
+let car_1 ={
+    make : "tesla",
+    model : "Model 3",
+    year : 2023
+}
+let keysArray = Object.keys(car_1)
+for (let key of keysArray){
+    console.log(key.toUpperCase())
+}
+
+let prices ={
+    bread : 2.50,
+    milk : 1.20,
+    cheese : 4.00
+}
+for (let [item, price] of Object.entries(prices)){
+    console.log("the price of " + item + " is $" + price)
+}
+
+let student_1 = [
+    { name: "Alice", age: 20 },
+    { name: "Bob", age: 22 },
+    { name: "Charlie", age: 19 }
+]
+for (let i = 0 ; i < student_1.length ; i++){
+    console.log (student_1[i].name + " is " + student_1[i].age + " years old")
+}
+
+let users =[
+    { username: "anna", isActive: true },
+    { username: "mark", isActive: false },
+    { username: "sara", isActive: true },
+    { username: "john", isActive: false }
+]
+let count = 0
+for (let user of users){
+    if (user.isActive === true) {
+        count += 1
+    }
+}
+console.log ("Active users: " + count)
+
