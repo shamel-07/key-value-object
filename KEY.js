@@ -296,3 +296,32 @@ for (let user of users){
 }
 console.log ("Active users: " + count)
 
+let products =[
+    { name : "Book", price : 10 },
+    { name : "Phone", price : 500 },
+    { name : "Pen", price : 2 }
+]
+let found = false;
+for (let i = 0; i < products.length; i++) {
+    if (products[i].price > 100) {
+        console.log(products[i].name)
+        found = true
+        break
+    }
+}
+if (found = false) {
+console.log("No expensive product found")
+}
+
+let points = {
+    a: 5,
+    b: 10,
+    c: 15,
+    d: 20
+}
+let pointsArray = Object.values(points)
+let total = 0
+for (let point of pointsArray) {
+    total += point
+}
+console.log(total)
